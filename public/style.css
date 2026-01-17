@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+    --magi-orange: #ff9d00;
+    --magi-cyan: #00f2ff;
+    --magi-red: #ff003c;
+    --magi-green: #00ff41;
+    --magi-bg: #050505;
+}
+
+body {
+    background-color: var(--magi-bg);
+    background-image: 
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 3px 100%;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.magi-wrapper{
+    padding-top: 3rem;
+}
+/* ヘッダーの間隔を調整 */
+.neon-top-section {
+    position: relative;
+    height: 80px;
+    display: flex;
+    justify-content: center; /* 中央に寄せる */
+    gap: 200px; /* 提訴と決議の距離をここで調整 */
+    align-items: center;
+    padding: 0 5%;
+}
+
+.neon-lines {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.neon-line {
+    height: 3px;
+    background-color: var(--magi-green);
+    box-shadow: 0 0 10px var(--magi-green), 0 0 20px var(--magi-green);
+}
+
+.neon-title {
+    font-size: 5rem;
+    color: rgb(255, 111, 0);
+    text-shadow: 0 0 15px rgb(255, 111, 0);
+    background-color: var(--magi-bg); /* 線を隠すための背景 */
+    padding: 0 20px;
+    z-index: 2;
+    margin: 0;
+}
+
+/* 情報パネル */
+.info-bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10%;
+}
+
+.info-panel-left {
+    color: var(--magi-orange);
+    font-size: 20px;
+    color:rgb(255, 111, 0)
+}
+
+/* 決議ボックスの枠 */
+.decision-box {
+    display: block;
+    border: 6px double;
+    padding: 10px 40px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    min-width: 200px;
+    text-align: center;
+}
+
+.cyan-text { 
+    border-color: var(--magi-cyan); 
+    color: var(--magi-cyan); 
+    box-shadow: 0 0 20px var(--magi-cyan), inset 0 0 15px var(--magi-cyan);
+}
+
+.orange-text { 
+    border-color: var(--magi-red) !important; 
+    color: var(--magi-red) !important; 
+    box-shadow: 0 0 20px var(--magi-red), inset 0 0 15px var(--magi-red) !important;
+}
+
+/* MAGIパネル配置 */
+.magi-main { height: 10vh; display: grid; place-items: center; }
+.panel-container { position: relative; width: 550px; height: 440px; }
+.panel {
+    position: absolute;
+    width: 200px; height: 200px; border: 3px solid #fff;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%, 0 15%);
+}
+.panel-name{
+    font-size: 30px;
+}
+
+#BALTHASAR { top: 0; left: 50%; transform: translateX(-50%); }
+#CASPER { bottom: 0; left: 0; }
+#MELCHIOR { bottom: 0; right: 0; }
+
+.bg-cyan { background-color: rgba(0, 242, 255, 0.2); border-color: var(--magi-cyan); color: var(--magi-cyan); }
+.bg-red { background-color: rgba(255, 0, 60, 0.2); border-color: var(--magi-red); color: var(--magi-red); }
+.bg-green { background-color: rgba(0, 255, 65, 0.2); border-color: var(--magi-green); color: var(--magi-green); }
+
+.magi-logo {
+    position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%);
+    font-size: 3rem; color: var(--magi-orange); letter-spacing: 10px;
+    color: rgb(255, 111, 0);
+}
+
+/* フッター */
+.magi-footer { position: fixed; bottom: 0; width: 100%; background: rgba(0,0,0,0.9); border-top: 1px solid var(--magi-orange); }
+.input-area { padding: 15px; display: flex; justify-content: center; gap: 15px; }
+input { background: transparent; border: 1px solid var(--magi-orange); color: var(--magi-orange); padding: 8px 15px; width: 400px; font-family: inherit; }
+button { background: var(--magi-orange); color: #000; border: none; padding: 8px 25px; font-weight: bold; cursor: pointer; }
+.comment-box { background: var(--magi-orange); color: #000; padding: 6px; text-align: center; font-weight: bold; }

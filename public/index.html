@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>MAGI SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="magi-wrapper">
+
+        <header class="magi-header-redesigned">
+            <div class="neon-top-section">
+                <h2 class="neon-title title-left">提訴</h2>
+                <div class="neon-lines">
+                    <div class="neon-line"></div>
+                    <div class="neon-line"></div>
+                    <div class="neon-line"></div>
+                </div>
+                <h2 class="neon-title title-right">決議</h2>
+            </div>
+        
+            <div class="info-bottom-section">
+                <div class="info-panel-left">
+                    <p class="info-row">CODE：<span id="display-code">378</span></p>
+                    <p class="info-row">FILE : MAGI_SYS</p>
+                    <p class="info-row">STATE : <span id="display-message">WAITING...</span></p>
+                    <span id="display-message" style="display: none;"></span>
+                </div>
+        
+                <div class="info-panel-right">
+                    <div id="final-decision-text" class="decision-box decision-status cyan-text">
+                        調整中
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="magi-main">
+            <div class="panel-container">
+                <div id="BALTHASAR" class="panel bg-green">
+                    <span class="panel-name">BALTHASAR-2</span>
+                    <span class="panel-result"></span>
+                </div>
+                <div class="magi-logo">MAGI</div>
+                <div id="CASPER" class="panel bg-green">
+                    <span class="panel-name">CASPER-3</span>
+                    <span class="panel-result"></span>
+                </div>
+                <div id="MELCHIOR" class="panel bg-green">
+                    <span class="panel-name">MELCHIOR-1</span>
+                    <span class="panel-result"></span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="magi-footer">
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="COMMAND INPUT" onkeypress="if(event.key==='Enter') askMagi()"">
+                <button onclick="askMagi()">EXECUTE</button>
+            </div>
+            <div id="comment-bar" class="comment-box">
+                Waiting for command
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
