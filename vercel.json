@@ -1,0 +1,7 @@
+{
+    "version": 2,
+    "rewrites": [
+        { "source": "/ask-magi", "destination": "/api/app.js" },
+        { "source": "/(.*)", "destination": "/public/$1" }
+    ]
+}
